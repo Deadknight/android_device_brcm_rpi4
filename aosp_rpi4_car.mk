@@ -116,9 +116,46 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.automotive.vehicle@V4-default-service
 
+# ARDA_MAPS_TILE_FIX_BEGIN
+# Google Maps/GMS Chimera mount namespace and package visibility fixes.
+
+PRODUCT_PACKAGES += \
+    ArdaFrameworkGoogleVisibilityOverlay
+
+PRODUCT_COPY_FILES += \
+    vendor/arda/configs/arda-google-sysconfig.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/arda-google-sysconfig.xml
+
+# ARDA_MAPS_TILE_FIX_END
+
 # Device identifier. This must come after all inclusions.
 PRODUCT_DEVICE := rpi4
 PRODUCT_NAME := aosp_rpi4_car
 PRODUCT_BRAND := Raspberry
 PRODUCT_MODEL := Pi 4
 PRODUCT_MANUFACTURER := Raspberry
+
+# ARDA_GAS_STAGE1_BEGIN
+$(call inherit-product-if-exists, vendor/arda/gas_car/arda_gas_car.mk)
+# ARDA_GAS_STAGE1_END
+
+# ARDA Google/GAS core files
+$(call inherit-product-if-exists, vendor/arda/gas_car/arda_google_core_product.mk)
+
+# ARDA: Google Maps AAOS VMS early-start overlay.
+PRODUCT_PACKAGES += ArdaCarServiceVmsOverlay
+
+# ARDA_GOLDEN_SPLIT_MODULES_BEGIN
+# Exact signed split APK bytes captured from the known-good Pi runtime.
+# Installed as raw prebuilt files into the same cluster directories as
+# their existing GAS base APK modules.
+
+PRODUCT_PACKAGES += \
+    ArdaMapsSplitArm64 \
+    ArdaMapsSplitMdpi \
+    ArdaGmsSplitAllLocales \
+    ArdaGmsSplitEn \
+    ArdaGmsSplitMdpi \
+    ArdaVendingSplitArm64 \
+    ArdaVendingSplitEn
+
+# ARDA_GOLDEN_SPLIT_MODULES_END
