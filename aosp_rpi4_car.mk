@@ -127,6 +127,12 @@ PRODUCT_COPY_FILES += \
 
 # ARDA_MAPS_TILE_FIX_END
 
+
+# ARDA_INPUT_BRIDGE_BEGIN
+# Platform-signed persistent input bridge for ARDA AAP input injection.
+PRODUCT_PACKAGES += ArdaInputBridge
+# ARDA_INPUT_BRIDGE_END
+
 # Device identifier. This must come after all inclusions.
 PRODUCT_DEVICE := rpi4
 PRODUCT_NAME := aosp_rpi4_car
