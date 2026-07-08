@@ -140,6 +140,9 @@ PRODUCT_BRAND := Raspberry
 PRODUCT_MODEL := Pi 4
 PRODUCT_MANUFACTURER := Raspberry
 
+# ARDA Vehicle Manager
+$(call inherit-product-if-exists, vendor/arda/vehicle/arda_vehicle.mk)
+
 # ARDA_GAS_STAGE1_BEGIN
 $(call inherit-product-if-exists, vendor/arda/gas_car/arda_gas_car.mk)
 # ARDA_GAS_STAGE1_END
