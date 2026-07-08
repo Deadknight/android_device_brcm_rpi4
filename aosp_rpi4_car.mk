@@ -140,6 +140,9 @@ PRODUCT_BRAND := Raspberry
 PRODUCT_MODEL := Pi 4
 PRODUCT_MANUFACTURER := Raspberry
 
+
+
+
 # ARDA Vehicle Manager
 $(call inherit-product-if-exists, vendor/arda/vehicle/arda_vehicle.mk)
 
