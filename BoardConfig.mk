@@ -68,3 +68,11 @@ BOARD_HOSTAPD_PRIVATE_LIB := lib_driver_cmd_$(BOARD_WLAN_DEVICE)
 BOARD_WPA_SUPPLICANT_DRIVER := NL80211
 BOARD_WPA_SUPPLICANT_PRIVATE_LIB := lib_driver_cmd_$(BOARD_WLAN_DEVICE)
 WPA_SUPPLICANT_VERSION := VER_0_8_X
+
+# ARDA Vehicle platform policy
+SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += vendor/arda/vehicle/sepolicy/private
+
+# ARDA GNSS AIDL service policy
+
+# ARDA GNSS AIDL service policy
+SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += vendor/arda/gnss/sepolicy/private

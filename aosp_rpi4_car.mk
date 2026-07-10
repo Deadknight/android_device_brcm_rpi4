@@ -127,12 +127,24 @@ PRODUCT_COPY_FILES += \
 
 # ARDA_MAPS_TILE_FIX_END
 
+
+# ARDA_INPUT_BRIDGE_BEGIN
+# Platform-signed persistent input bridge for ARDA AAP input injection.
+PRODUCT_PACKAGES += ArdaInputBridge
+# ARDA_INPUT_BRIDGE_END
+
 # Device identifier. This must come after all inclusions.
 PRODUCT_DEVICE := rpi4
 PRODUCT_NAME := aosp_rpi4_car
 PRODUCT_BRAND := Raspberry
 PRODUCT_MODEL := Pi 4
 PRODUCT_MANUFACTURER := Raspberry
+
+
+
+
+# ARDA Vehicle Manager
+$(call inherit-product-if-exists, vendor/arda/vehicle/arda_vehicle.mk)
 
 # ARDA_GAS_STAGE1_BEGIN
 $(call inherit-product-if-exists, vendor/arda/gas_car/arda_gas_car.mk)
@@ -159,3 +171,6 @@ PRODUCT_PACKAGES += \
     ArdaVendingSplitEn
 
 # ARDA_GOLDEN_SPLIT_MODULES_END
+
+# ARDA GNSS AIDL HAL Phase 3.0B3
+$(call inherit-product-if-exists, vendor/arda/gnss/arda_gnss.mk)
