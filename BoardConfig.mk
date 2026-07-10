@@ -71,3 +71,5 @@ WPA_SUPPLICANT_VERSION := VER_0_8_X
 
 # ARDA Vehicle platform policy
 SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += vendor/arda/vehicle/sepolicy/private
+
+SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += vendor/arda/gnss/sepolicy/private

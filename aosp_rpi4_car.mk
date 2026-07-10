@@ -171,3 +171,5 @@ PRODUCT_PACKAGES += \
     ArdaVendingSplitEn
 
 # ARDA_GOLDEN_SPLIT_MODULES_END
+
+$(call inherit-product-if-exists, vendor/arda/gnss/arda_gnss.mk)
