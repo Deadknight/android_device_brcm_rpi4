@@ -114,7 +114,7 @@ PRODUCT_COPY_FILES += \
 
 # Vehicle
 PRODUCT_PACKAGES += \
-    android.hardware.automotive.vehicle@V4-default-service
+    arda-vhal-base-service
 
 # ARDA_MAPS_TILE_FIX_BEGIN
 # Google Maps/GMS Chimera mount namespace and package visibility fixes.

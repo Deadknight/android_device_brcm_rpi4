@@ -76,3 +76,6 @@ SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += vendor/arda/vehicle/sepolicy/private
 
 # ARDA GNSS AIDL service policy
 SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += vendor/arda/gnss/sepolicy/private
+
+# ARDA VHAL vendor executable labeling
+BOARD_VENDOR_SEPOLICY_DIRS += vendor/arda/vehicle/sepolicy/vendor
