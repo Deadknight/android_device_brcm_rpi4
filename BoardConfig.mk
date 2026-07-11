@@ -73,3 +73,5 @@ WPA_SUPPLICANT_VERSION := VER_0_8_X
 SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += vendor/arda/vehicle/sepolicy/private
 
 SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += vendor/arda/gnss/sepolicy/private
+# ARDA VHAL vendor executable labeling
+BOARD_VENDOR_SEPOLICY_DIRS += vendor/arda/vehicle/sepolicy/vendor
