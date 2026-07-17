@@ -174,3 +174,6 @@ PRODUCT_PACKAGES += \
 
 # ARDA GNSS AIDL HAL Phase 3.0B3
 $(call inherit-product-if-exists, vendor/arda/gnss/arda_gnss.mk)
+
+# ARDA connectivity transport core
+$(call inherit-product-if-exists, vendor/arda/ardaplatform/arda_connectivity_product.mk)
