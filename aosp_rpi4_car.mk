@@ -131,6 +131,7 @@ PRODUCT_COPY_FILES += \
 # ARDA_INPUT_BRIDGE_BEGIN
 # Platform-signed persistent input bridge for ARDA AAP input injection.
 PRODUCT_PACKAGES += ArdaInputBridge
+PRODUCT_PACKAGES_DEBUG += arda-input-bridge-probe
 # ARDA_INPUT_BRIDGE_END
 
 # Device identifier. This must come after all inclusions.
@@ -145,6 +146,7 @@ PRODUCT_MANUFACTURER := Raspberry
 
 # ARDA Vehicle Manager
 $(call inherit-product-if-exists, vendor/arda/vehicle/arda_vehicle.mk)
+$(call inherit-product-if-exists, vendor/arda/vehicle/arda_vehicle_smoke.mk)
 
 # ARDA_GAS_STAGE1_BEGIN
 $(call inherit-product-if-exists, vendor/arda/gas_car/arda_gas_car.mk)
@@ -172,4 +174,8 @@ PRODUCT_PACKAGES += \
 
 # ARDA_GOLDEN_SPLIT_MODULES_END
 
+# ARDA GNSS AIDL HAL Phase 3.0B3
 $(call inherit-product-if-exists, vendor/arda/gnss/arda_gnss.mk)
+
+# ARDA connectivity transport core
+$(call inherit-product-if-exists, vendor/arda/ardaplatform/arda_connectivity_product.mk)

@@ -56,7 +56,6 @@ TARGET_NO_RECOVERY := true
 
 # SELinux
 BOARD_SEPOLICY_DIRS += device/brcm/rpi4/sepolicy
-BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
 
 # Treble
 TARGET_COPY_OUT_VENDOR := vendor
@@ -71,7 +70,12 @@ WPA_SUPPLICANT_VERSION := VER_0_8_X
 
 # ARDA Vehicle platform policy
 SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += vendor/arda/vehicle/sepolicy/private
+SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += vendor/arda/input_bridge/sepolicy/private
 
+# ARDA GNSS AIDL service policy
+
+# ARDA GNSS AIDL service policy
 SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += vendor/arda/gnss/sepolicy/private
+
 # ARDA VHAL vendor executable labeling
 BOARD_VENDOR_SEPOLICY_DIRS += vendor/arda/vehicle/sepolicy/vendor
