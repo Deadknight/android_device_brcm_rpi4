@@ -179,3 +179,6 @@ $(call inherit-product-if-exists, vendor/arda/gnss/arda_gnss.mk)
 
 # ARDA connectivity transport core
 $(call inherit-product-if-exists, vendor/arda/ardaplatform/arda_connectivity_product.mk)
+
+# ARDA_H264_PRODUCTION_PRODUCT_PACKAGES_V1
+$(call inherit-product, vendor/arda/hwencoder/minigbm/arda-h264-product.mk)
