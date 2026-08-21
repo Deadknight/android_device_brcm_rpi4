@@ -14,6 +14,10 @@ start_x=1
 
 # CPU
 arm_boost=1
+# ARDA_CPU_OC_CEILING_BEGIN
+# Validated Pi 4 Rev 1.2 firmware ceiling; runtime default remains 1500 MHz.
+arm_freq=1900
+# ARDA_CPU_OC_CEILING_END
 
 # Display
 disable_overscan=1
