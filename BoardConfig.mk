@@ -79,3 +79,6 @@ SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += vendor/arda/gnss/sepolicy/private
 
 # ARDA VHAL vendor executable labeling
 BOARD_VENDOR_SEPOLICY_DIRS += vendor/arda/vehicle/sepolicy/vendor
+
+# ARDA: allow the internal IVehicle/arda_base backing instance.
+DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += device/brcm/rpi4/arda_framework_compatibility_matrix.xml
